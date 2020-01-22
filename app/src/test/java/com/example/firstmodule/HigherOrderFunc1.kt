@@ -2,7 +2,7 @@ package com.example.firstmodule
 
 import org.junit.Test
 
-class HigherOrderFunc {
+class HigherOrderFunc1 {
     @Test
 
     fun main()

@@ -2,7 +2,7 @@ package com.example.firstmodule
 
 import org.junit.Test
 
-class withApplyFunc {
+class WithApplyFunc1 {
     @Test
     fun main()
     {
