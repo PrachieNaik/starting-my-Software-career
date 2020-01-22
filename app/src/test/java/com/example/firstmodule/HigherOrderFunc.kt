@@ -14,6 +14,8 @@ class HigherOrderFunc {
                 println(sum)
             }
         })
+        val lambda:(Int)->(Unit)={s: Int->println(s)}
+        p.addTwoNumber(7,9,lambda)
     }
     class Program()
     {
@@ -26,6 +28,11 @@ class HigherOrderFunc {
         {
             val temp:Int = a+b;
             println(temp)
+        }
+        fun addTwoNumber(a:Int,b:Int,action:(Int)->Unit)
+        {
+            val temp:Int=a+b;
+            action(temp);
         }
 
     }
