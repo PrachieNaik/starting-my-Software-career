@@ -18,60 +18,62 @@ class ExampleUnitTest {
 
     @Test
     fun kotlin() {
+        main()
+    }
 
-        fun main(args: Array<String>)
-        {
-            var dog = Dog()
-            dog.breed = "labra"
-            dog.color = "black"
-            dog.bark()
-            dog.eat()
+    fun main()
+    {
+        val dog = Dog()
+        dog.breed = "labra"
+        dog.color = "black"
+        dog.bark()
+        dog.eat()
 
-            var cat = Cat()
-            cat.age = 7
-            cat.color = "brown"
-            cat.meow()
-            cat.eat()
+        val cat = Cat()
+        cat.age = 7
+        cat.color = "brown"
+        cat.meow()
+        cat.eat()
 
-            var animal = Animal()
-            animal.color = "white"
-            animal.eat()
+        val animal = Animal()
+        animal.color = "white"
+        animal.eat()
 
-
-
-        }
-        //use of open keyword
-        open class Animal
-        {
-            var color:String=""
-            open fun eat(){
-                println("Animal eats")
-            }
-
-        }
-        class Dog : Animal(){
-            var breed: String = ""
-
-            fun bark(){
-                println("Dog bark")
-            }
-
-            //overriding
-            override fun eat(){
-                println("Dog eat")
-            }
-        }
-        class Cat: Animal() {
-            var age: Int = -1
-
-            fun meow(){
-                println("Cat meow")
-            }
-            override fun eat(){
-                println("Dog eat")
-            }
-        }
 
 
     }
+    //use of open keyword
+    open class Animal
+    {
+        var color:String=""
+        open fun eat(){
+            println("Animal eats")
+        }
+
+    }
+    class Dog : Animal(){
+        var breed: String = ""
+
+        fun bark(){
+            println("Dog bark")
+        }
+
+        //overriding
+        override fun eat(){
+            println("Dog eat")
+        }
+    }
+
+
+    class Cat: Animal() {
+        var age: Int = -1
+
+        fun meow(){
+            println("Cat meow")
+        }
+        override fun eat(){
+            println("Dog eat")
+        }
+    }
+
 }
