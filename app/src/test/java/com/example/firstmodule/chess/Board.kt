@@ -1,7 +1,5 @@
 package com.example.firstmodule.chess
 
-import java.util.*
-
 
 class Board(
     var matrix: Array<Array<Cell>> = arrayOf()
@@ -14,6 +12,19 @@ class Board(
             }
         }
 
-        print(Arrays.deepToString(matrix))
+        makeInitialBoard()
+
+        matrix.forEach { row ->
+            row.forEach {
+                print(it.currentIPiece.toString())
+                print("\t \t" )
+            }
+            println()
+        }
+    }
+
+
+    private fun makeInitialBoard(){
+        matrix[0][0].currentIPiece = Piece(Rank.ROOK, Color.BLACK)
     }
 }
