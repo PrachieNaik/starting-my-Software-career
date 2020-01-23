@@ -19,20 +19,20 @@ class HigherOrderFunc1 {
     }
     class Program()
     {
-        fun addTwoNumber(a:Int,b:Int,action: addTwo)
+        fun addTwoNumber(a:Int,b:Int,action: addTwo) //interface
         {
             val sum=a+b
             action.execute(sum)
         }
         fun addTwoNumber(a:Int,b:Int)// simple
         {
-            val temp:Int = a+b;
+            val temp:Int = a+b
             println(temp)
         }
-        fun addTwoNumber(a:Int,b:Int,action:(Int)->Unit)
+        fun addTwoNumber(a:Int,b:Int,action:(Int)->Unit) //Higher order
         {
-            val temp:Int=a+b;
-            action(temp);
+            val temp:Int=a+b
+            action(temp)
         }
 
     }
