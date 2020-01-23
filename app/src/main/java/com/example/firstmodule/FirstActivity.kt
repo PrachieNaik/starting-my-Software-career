@@ -4,16 +4,18 @@ import android.app.ActivityManager
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 
 
 
 class FirstActivity : AppCompatActivity() {
     lateinit var activityManager:ActivityManager
-
+    private val TAG= FirstActivity::class.java.simpleName
     lateinit var button: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate")
         setContentView(R.layout.activity_first)
         button=findViewById(R.id.Button1)
         button.setOnClickListener{
@@ -22,6 +24,7 @@ class FirstActivity : AppCompatActivity() {
             activityManager= getSystemService(ACTIVITY_SERVICE) as ActivityManager
         }
     }
+
     protected fun getAppTaskState(): String {
 
         val stringBuilder = StringBuilder()
@@ -53,5 +56,30 @@ class FirstActivity : AppCompatActivity() {
             stringBuilder.append("\n\n")
         }
         return stringBuilder.toString()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG,"onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG,"onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG,"onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG,"onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG,"onDestroy")
     }
 }

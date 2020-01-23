@@ -17,7 +17,7 @@ class HigherOrderFunc1 {
         val lambda:(Int)->(Unit)={s: Int->println(s)}
         p.addTwoNumber(7,9,lambda)
     }
-    class Program()
+    class Program
     {
         fun addTwoNumber(a:Int,b:Int,action: addTwo) //interface
         {
