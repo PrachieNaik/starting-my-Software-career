@@ -1,10 +1,16 @@
 package com.example.firstmodule.chess
 
-class GameController(val players: List<Player>) {
+class GameController(
+    val players: List<Player>,
+    val board: Board = Board()
+) {
     var currentPlayer: Player? = null
-
     init {
-        Board()
+        currentPlayer = players[(0)]//randomly choosing first player from the list
+    }
+
+    fun move(from: Cell, to: Cell) {
+
     }
 
 }
