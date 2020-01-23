@@ -15,6 +15,7 @@ class SecondActivity : AppCompatActivity() {
         button2.setOnClickListener{
             intent = Intent(this, ThirdActivity::class.java)
             startActivity(intent)
+
         }
     }
 }
