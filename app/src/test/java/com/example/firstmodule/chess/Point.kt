@@ -1,3 +1,3 @@
 package com.example.firstmodule.chess
 
-class Point(val x : Int , val y:Int)
+class Point(val row: Int, val col: Int)

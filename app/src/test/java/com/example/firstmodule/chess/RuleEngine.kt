@@ -1,7 +1,9 @@
 package com.example.firstmodule.chess
 
 class RuleEngine {
-    fun validMove(from:Cell,to:Cell) :Boolean{
-     TODO()  //internal logic
+
+
+    fun validMove(board: Board, from: Point, to: Point): Boolean {
+        return true
     }
 }

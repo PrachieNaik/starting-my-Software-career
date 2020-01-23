@@ -8,6 +8,12 @@ class Driver {
     fun test() {
         val player1 = Player("Prachie", "1234", "human", Color.BLACK)
         val player2 = Player("Deepankur", "5678", "human", Color.WHITE)
-        GameController(listOf(player1, player2))
+        val gameController = GameController(listOf(player1, player2))
+
+        gameController.move(
+            player = player1,
+            from = Point(1, 0),
+            to = Point(2, 0)
+        )
     }
 }
