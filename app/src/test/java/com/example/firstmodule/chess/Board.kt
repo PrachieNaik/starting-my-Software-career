@@ -1,9 +1,19 @@
 package com.example.firstmodule.chess
 
+import java.util.*
+
+
 class Board(
-    val cells: Array<IntArray> = Array(8) { IntArray(8) }
+    var matrix: Array<Array<Cell>> = arrayOf()
 ) {
     init {
 
+        matrix = Array(8) { row ->
+            Array(8) { col ->
+                Cell()
+            }
+        }
+
+        print(Arrays.deepToString(matrix))
     }
 }
