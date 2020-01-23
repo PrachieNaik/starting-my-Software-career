@@ -15,5 +15,8 @@ class Driver {
             from = Point(1, 0),
             to = Point(2, 0)
         )
+
+        print("\n \n")
+        Board.printBoard(gameController.board.matrix)
     }
 }

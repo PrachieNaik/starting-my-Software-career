@@ -24,7 +24,10 @@ class GameController(
             return false
         }
 
-        TODO()
+        val movePiece = board.matrix[from.row][from.col].currentIPiece
+        board.matrix[to.row][to.col].currentIPiece = movePiece
+        board.matrix[from.row][from.col].currentIPiece=null
+
         return true
 
     }

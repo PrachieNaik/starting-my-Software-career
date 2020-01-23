@@ -13,7 +13,6 @@ class Board(
         }
 
         makeInitialBoard()
-
         matrix.forEach { row ->
             row.forEach {
                 print(it.currentIPiece.toString())
@@ -22,6 +21,19 @@ class Board(
             println()
         }
     }
+
+    companion object {
+        fun printBoard( matrix: Array<Array<Cell>> ){
+            matrix.forEach { row ->
+                row.forEach {
+                    print(it.currentIPiece.toString())
+                    print("\t \t" )
+                }
+                println()
+            }
+        }
+    }
+
 
 
     private fun makeInitialBoard(){
