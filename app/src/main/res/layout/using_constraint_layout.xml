@@ -20,30 +20,77 @@
             >
 
         </ImageView>
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textview"
             app:layout_constraintStart_toEndOf="@id/image"
             android:text="Prachi Naik"
-            android:padding="5dp"
+
             app:layout_constraintTop_toBottomOf=""
+
             ></TextView>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button"
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             app:layout_constraintStart_toEndOf="@id/image"
             app:layout_constraintTop_toBottomOf="@+id/textview"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:text="Accept"></Button>
-        <Button
+            android:textSize="15dp"
+
+
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/image1"
+            >
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Accept"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@id/image1"
+            app:layout_constraintTop_toBottomOf="@+id/textview"></TextView>
+
+
+        <TextView
             android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="Reject"
+            android:textSize="15dp"
             app:layout_constraintStart_toEndOf="@id/button"
-            app:layout_constraintTop_toBottomOf="@+id/textview"
+            app:layout_constraintTop_toBottomOf="@+id/textview">
+
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/ic_launcher"
+
+            app:layout_constraintStart_toEndOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/textview">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/button"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text="Reject"></Button>
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/image3"
+            android:layout_marginLeft="10dp">
+
+        </ImageView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
