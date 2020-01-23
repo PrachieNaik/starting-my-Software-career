@@ -23,13 +23,13 @@ class GameController(
         if (!ruleEngine.validMove(board, from, to)) {
             return false
         }
-
+        if(board.matrix[from.row][from.col].currentIPiece==null)
+            return false
         val movePiece = board.matrix[from.row][from.col].currentIPiece
         board.matrix[to.row][to.col].currentIPiece = movePiece
         board.matrix[from.row][from.col].currentIPiece=null
 
         return true
-
     }
 
 }

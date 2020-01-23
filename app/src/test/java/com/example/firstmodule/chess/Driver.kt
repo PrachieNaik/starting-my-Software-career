@@ -12,7 +12,7 @@ class Driver {
 
         gameController.move(
             player = player1,
-            from = Point(1, 0),
+            from = Point(3, 0),
             to = Point(2, 0)
         )
 
