@@ -2,7 +2,7 @@ package com.example.firstmodule
 
 import android.widget.ImageView
 
-data class PersonDataClass(
+data class Person(
     val position: Int,
     val id: String,
     val image: ImageView,

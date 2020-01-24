@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 var flag: Boolean = false
 
-class RecyclerViewAdapter(private val userList: ArrayList<PersonDataClass>) :
+class RecyclerViewAdapter(private val userList: ArrayList<Person>) :
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,7 +36,7 @@ class RecyclerViewAdapter(private val userList: ArrayList<PersonDataClass>) :
         var checkbox = itemView.findViewById(R.id.checkBox) as CheckBox
 
 
-        fun bindItems(user: PersonDataClass) {
+        fun bindItems(user: Person) {
             val textViewName = itemView.findViewById(R.id.textview) as TextView
             textViewName.text = user.id
 
