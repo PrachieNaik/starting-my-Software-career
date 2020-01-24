@@ -13,25 +13,15 @@ class RecyclerViewPractice : AppCompatActivity() {
         setContentView(R.layout.activity_recycler_view_practice)
         val recyclerView = findViewById(R.id.list) as RecyclerView
 
-        //adding a layoutmanager
         recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-
-
-        //crating an arraylist to store users using the data class user
         val users = ArrayList<PersonDataClass>()
         val imageView = ImageView(this)
         imageView.setImageResource(R.drawable.ic_launcher_background)
-        //adding some dummy data to the listn
-        for(element in 1..20)
+        for(element in 1..100)
         {
-            users.add(PersonDataClass("$element",imageView))
+            users.add(PersonDataClass(element,"$element",imageView))
         }
-
-
-        //creating our adapter
         val adapter = RecyclerViewAdapter(users)
-
-        //now adding the adapter to recyclerview
         recyclerView.adapter = adapter
 
 

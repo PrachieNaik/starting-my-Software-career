@@ -103,7 +103,8 @@
             app:layout_constraintHorizontal_bias="0.915"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="7dp"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            android:id="@+id/checkBox">
 
         </androidx.appcompat.widget.AppCompatCheckBox>
     </androidx.constraintlayout.widget.ConstraintLayout>
