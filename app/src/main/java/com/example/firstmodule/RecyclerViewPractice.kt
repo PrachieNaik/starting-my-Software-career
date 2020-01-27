@@ -19,7 +19,7 @@ class RecyclerViewPractice : AppCompatActivity() {
         val imageView = ImageView(this)
         imageView.setImageResource(R.drawable.ic_launcher_background)
         var count=1
-        for (element in 1..100) {
+        for (element in 1..30) {
             if (element % 10 == 1 && element != 1)
             {
                 users.add(TitleData("$count"))
@@ -27,7 +27,7 @@ class RecyclerViewPractice : AppCompatActivity() {
             }
             users.add(Person(element, "$element", imageView))
         }
-
+        users.add(Loader())
         val adapter = RecyclerViewAdapter1(users)
         recyclerView.adapter = adapter
     }

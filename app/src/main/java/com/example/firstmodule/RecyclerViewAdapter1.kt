@@ -23,11 +23,16 @@ class RecyclerViewAdapter1(private val displayList: ArrayList<DisplayList>) :
             val v = LayoutInflater.from(parent.context)
                 .inflate(R.layout.blank_title, parent, false)
             return TitleVH(v)
-        } else {
+        } else if(viewType==1){
             val v = LayoutInflater.from(parent.context)
                 .inflate(R.layout.using_constraint_layout, parent, false)
             return ItemVH(v)
 
+        }else
+        {
+            val v = LayoutInflater.from(parent.context)
+                .inflate(R.layout.loader_layout, parent, false)
+            return LoaderVH(v)
         }
     }
 
@@ -38,8 +43,10 @@ class RecyclerViewAdapter1(private val displayList: ArrayList<DisplayList>) :
     override fun getItemViewType(position: Int): Int {
         return if (displayList[position].getType() == ItemType.TITLE)
             0
-        else
+        else if(displayList[position].getType() == ItemType.LIST_ITEM)
             1
+        else
+            2
     }
 
     override fun onBindViewHolder(holder: GenericVH, position: Int) {
@@ -52,6 +59,9 @@ class RecyclerViewAdapter1(private val displayList: ArrayList<DisplayList>) :
             flag = false
             if (item.checked)
                 flag = true
+        } else if (holder is LoaderVH)
+        {
+            holder.bindItems(item as Loader)
         }
 
     }
@@ -82,6 +92,13 @@ class RecyclerViewAdapter1(private val displayList: ArrayList<DisplayList>) :
 
             textViewName.text = user.number
                 Log.d("Person","$user.number")
+
+        }
+
+    }
+    class LoaderVH(itemView: View) : GenericVH(itemView) {
+        fun bindItems(user: Loader) {
+            Log.d("Loader","  ")
 
         }
 
