@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image"
+                android:src="@mipmap/ic_launcher"
+                android:padding="20dp">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/image"
+                android:textSize="25dp"
+                android:paddingTop="20dp"
+                android:text="Prachi Naik"
+                android:id="@+id/textview"
+                android:layout_centerHorizontal="true"
+                ></TextView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview"
+                android:layout_toRightOf="@+id/image"
+                android:id="@+id/button"
+                android:text="Accept"
+                >
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview"
+                android:layout_toRightOf="@+id/button"
+                android:text="Reject"
+                >
+
+            </Button>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
