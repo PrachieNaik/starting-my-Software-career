@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 var flag: Boolean = false
+var flag1: Boolean = false
+
 
 class RecyclerViewAdapter(private val userList: ArrayList<Person>) :
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
@@ -50,4 +52,5 @@ class RecyclerViewAdapter(private val userList: ArrayList<Person>) :
 
 
     }
+
 }
