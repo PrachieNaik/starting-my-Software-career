@@ -96,12 +96,24 @@ class RecyclerViewAdapter1(private val displayList: ArrayList<DisplayList>) :
         }
 
     }
+    var mIsLoading:Boolean=true
     class LoaderVH(itemView: View) : GenericVH(itemView) {
         fun bindItems(user: Loader) {
             Log.d("Loader","  ")
+//            mIsLoading=false
+//            OnScrollListener()
 
         }
 
     }
+//    var mScrollListener: RecyclerView.OnScrollListener = object : RecyclerView.OnScrollListener() {
+//        override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+//            if (mIsLoading)
+//                return
+//            else
+//                Log.d("Loader","loader")
+//            }
+//        }
+//    }
 
 }
