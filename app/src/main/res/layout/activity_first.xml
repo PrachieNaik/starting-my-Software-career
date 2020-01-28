@@ -13,6 +13,36 @@
         android:text="Start Service"
         android:layout_width="wrap_content"
         android:layout_centerVertical="true"></Button>
+    <Button android:id="@+id/Button3"
 
+        android:layout_height="wrap_content"
+        android:text="Stop Service"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/Button2"></Button>
+    <Button android:id="@+id/Button4"
+
+        android:layout_height="wrap_content"
+        android:text="Get random number"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/Button3"></Button>
+    <Button android:id="@+id/Button5"
+
+        android:layout_height="wrap_content"
+        android:text="Bind service"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/Button4"></Button>
+    <Button android:id="@+id/Button6"
+
+        android:layout_height="wrap_content"
+        android:text="Unbind service"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/Button5"></Button>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textviewService"
+    android:layout_below="@+id/Button6"></TextView>
 
 </RelativeLayout>
