@@ -7,6 +7,12 @@
         android:layout_height="wrap_content"
         android:text="Go to second activity"
         android:layout_width="wrap_content"></Button>
+    <Button android:id="@+id/Button2"
+
+        android:layout_height="wrap_content"
+        android:text="Start Service"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"></Button>
 
 
 </RelativeLayout>

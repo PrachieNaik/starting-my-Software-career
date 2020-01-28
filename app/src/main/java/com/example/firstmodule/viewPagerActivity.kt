@@ -6,7 +6,6 @@ import kotlinx.android.synthetic.main.activity_view_pager.*
 
 
 class viewPagerActivity : AppCompatActivity() {
-    private val firstFragment = IntroFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_pager)

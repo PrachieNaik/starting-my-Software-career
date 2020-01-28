@@ -4,10 +4,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 
 class IntroFragment : Fragment() {
-
     companion object {
         fun newInstance(Number: String): Fragment {
             val fragment = IntroFragment()

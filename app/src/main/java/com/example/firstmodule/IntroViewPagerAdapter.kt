@@ -10,7 +10,7 @@ class IntroViewPagerAdapter(supportFragmentManager: FragmentManager) :
     private val mFragmentTitleList = ArrayList<String>()
     override fun getItem(position: Int): Fragment {
         //return IntroFragment.newInstance("Title" + position)
-        return mFragmentList.get(position)
+        return mFragmentList[position]
     }
 
     override fun getCount(): Int {

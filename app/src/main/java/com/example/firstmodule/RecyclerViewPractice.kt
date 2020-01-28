@@ -10,7 +10,10 @@ import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.os.Handler
+import android.util.DisplayMetrics
 import android.util.Log
+import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 
 
 class RecyclerViewPractice : AppCompatActivity() {
@@ -30,7 +33,13 @@ class RecyclerViewPractice : AppCompatActivity() {
         addScrollListener()
         imageView= ImageView(this)
         imageView.setImageResource(R.drawable.ic_launcher_background)
-
+        val displayMetrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(displayMetrics)
+        var height = displayMetrics.heightPixels
+       // var temp= findViewById<CardView>(R.id.)
+       // var layoutHeight:Int=150
+     //       Log.d("Height","$temp")
+      //  var temp2=height/layoutHeight
 
         for (element in 1..10) {
             if (element % 10 == 1 && element != 1) {

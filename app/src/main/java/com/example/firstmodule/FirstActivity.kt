@@ -13,15 +13,25 @@ class FirstActivity : AppCompatActivity() {
     lateinit var activityManager:ActivityManager
     private val TAG= FirstActivity::class.java.simpleName
     lateinit var button: Button
+    lateinit var button2: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
         setContentView(R.layout.activity_first)
+
+        button2=findViewById(R.id.Button2)
         button=findViewById(R.id.Button1)
         button.setOnClickListener{
             intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
             activityManager= getSystemService(ACTIVITY_SERVICE) as ActivityManager
+
+        }
+
+        val serviceInternt= Intent(applicationContext,ServicePractice::class.java)
+        button2.setOnClickListener{
+            Log.d(TAG,"Thread"+Thread.currentThread().id)
+            startService(serviceInternt)
         }
     }
 
