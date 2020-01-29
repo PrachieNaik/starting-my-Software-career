@@ -60,6 +60,5 @@ class ServicePractice : Service() {
         super.onDestroy()
         stopRandomNumberGenerator()
         Log.d(TAG, "OnDestroy")
-        //stopSelf()
     }
 }

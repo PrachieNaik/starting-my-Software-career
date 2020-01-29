@@ -9,39 +9,25 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
-import android.widget.Button
-import android.widget.TextView
-import java.util.*
+import kotlinx.android.synthetic.main.activity_first.*
 
 
 class FirstActivity : AppCompatActivity() {
     lateinit var activityManager: ActivityManager
 
     private val TAG = FirstActivity::class.java.simpleName
-    lateinit var button: Button
-    lateinit var button2: Button
-    lateinit var button3: Button
-    lateinit var button4: Button
-    lateinit var button5: Button
-    lateinit var button6: Button
+
     lateinit var servicePractice: ServicePractice
     var isServiceBound: Boolean = false
     var serviceConnection: ServiceConnection? = null
-    lateinit var textviewService: TextView
+
     lateinit var serviceInternt: Intent
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
         setContentView(R.layout.activity_first)
         serviceInternt = Intent(applicationContext, ServicePractice::class.java)
-        button2 = findViewById(R.id.Button2)
-        button3 = findViewById(R.id.Button3)
-        button4 = findViewById(R.id.Button4)
-        button5 = findViewById(R.id.Button5)
-        button6 = findViewById(R.id.Button6)
-        button = findViewById(R.id.Button1)
-        textviewService = findViewById(R.id.textviewService)
-        button.setOnClickListener {
+        button1.setOnClickListener {
             intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
             activityManager = getSystemService(ACTIVITY_SERVICE) as ActivityManager
@@ -57,13 +43,13 @@ class FirstActivity : AppCompatActivity() {
             stopService(serviceInternt)
         }
         button4.setOnClickListener {
-            var temp = setRandomNo()
+            setRandomNo()
         }
         button5.setOnClickListener {
-            var temp = bindService()
+            bindService()
         }
         button6.setOnClickListener {
-            var temp = unbindService()
+            unbindService()
         }
     }
 
@@ -71,7 +57,7 @@ class FirstActivity : AppCompatActivity() {
         if (serviceConnection == null) {
             serviceConnection = object : ServiceConnection {
                 override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
-                    var myServiceBinder: ServicePractice.MyServiceBinder =
+                    val myServiceBinder =
                         service as ServicePractice.MyServiceBinder
                     servicePractice = myServiceBinder.getService()
                     isServiceBound = true
@@ -96,10 +82,15 @@ class FirstActivity : AppCompatActivity() {
     }
 
     private fun setRandomNo() {
-        if (isServiceBound)
-            textviewService.setText("Random number" + servicePractice.getRandomNo())
-        else
-            textviewService.setText("Service unbound")
+
+        if (isServiceBound) {
+            val temp = "Random number" + servicePractice.getRandomNo()
+            textviewService.text = temp
+        }
+        else {
+            val temp="Service unbound"
+            textviewService.text = temp
+        }
     }
 
 

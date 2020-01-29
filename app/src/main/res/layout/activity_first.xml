@@ -2,47 +2,49 @@
 <RelativeLayout android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent">
-    <Button android:id="@+id/Button1"
 
+    <Button android:id="@+id/button1"
         android:layout_height="wrap_content"
         android:text="Go to second activity"
-        android:layout_width="wrap_content"></Button>
-    <Button android:id="@+id/Button2"
+        android:layout_width="wrap_content"/>
+
+    <Button android:id="@+id/button2"
 
         android:layout_height="wrap_content"
         android:text="Start Service"
         android:layout_width="wrap_content"
-        android:layout_centerVertical="true"></Button>
-    <Button android:id="@+id/Button3"
+        android:layout_centerVertical="true"/>
+    <Button android:id="@+id/button3"
 
         android:layout_height="wrap_content"
         android:text="Stop Service"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/Button2"></Button>
-    <Button android:id="@+id/Button4"
+        android:layout_below="@+id/button2"/>
+    <Button android:id="@+id/button4"
 
         android:layout_height="wrap_content"
         android:text="Get random number"
         android:layout_width="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_below="@+id/Button3"></Button>
-    <Button android:id="@+id/Button5"
+        android:layout_below="@+id/button3"/>
+    <Button android:id="@+id/button5"
 
         android:layout_height="wrap_content"
         android:text="Bind service"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/Button4"></Button>
-    <Button android:id="@+id/Button6"
+        android:layout_below="@+id/button4"/>
+    <Button android:id="@+id/button6"
 
         android:layout_height="wrap_content"
         android:text="Unbind service"
         android:layout_width="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_below="@+id/Button5"></Button>
+        android:layout_below="@+id/button5"/>
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/textviewService"
-    android:layout_below="@+id/Button6"></TextView>
+    android:layout_below="@+id/button6"/>
+
 
 </RelativeLayout>

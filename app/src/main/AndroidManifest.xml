@@ -21,6 +21,9 @@
         <activity android:name=".ThirdActivity" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".FirstActivity">
+
+        </activity>
+        <activity android:name=".ScreenSlidePagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 
-lateinit var button2: Button
+
 class SecondActivity : AppCompatActivity() {
+
+    lateinit var button2: Button
     private val TAG= SecondActivity::class.java.simpleName
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
