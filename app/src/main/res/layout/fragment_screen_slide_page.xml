@@ -9,5 +9,6 @@
         android:lineSpacingMultiplier="1.2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Pager 2" />
+        android:text="View Pager 2"
+        android:id="@+id/textviewfromfrag"/>
 </ScrollView>

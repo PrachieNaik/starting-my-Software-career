@@ -11,13 +11,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitExample : AppCompatActivity() {
-
+    lateinit var posts:List<Post>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_retrofit_example)
+
         val retrofit:Retrofit= Retrofit.Builder()
             .baseUrl("https://jsonplaceholder.typicode.com/")
             .addConverterFactory(GsonConverterFactory.create()).build()
+
+
         var jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi::class.java)
 
         val call:Call<List<Post>> = jsonPlaceHolderApi.getPosts()
@@ -31,13 +34,13 @@ class RetrofitExample : AppCompatActivity() {
                 if(!response!!.isSuccessful)
                 {
                     text_view_result.text="Code"+response?.code()   //if the url is not found
+
                     return
                 }
                 var content:String=""
-                val posts:List<Post> = response.body()
+                posts= response.body()
                 for(element in posts)
                 {
-                    content=" "
                     content+="id"+element.id+"\n"
                     content+="userId:"+element.userId+"\n"
                     content+="text:"+element.text+"\n"
@@ -51,4 +54,5 @@ class RetrofitExample : AppCompatActivity() {
         })
 
     }
+
 }
